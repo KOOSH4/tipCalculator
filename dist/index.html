@@ -4,11 +4,164 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
     <title>Webpack App</title>
   </head>
-  <body>
-    <h1 class="text-4xl text-blue-700">Tip Calculator!</h1>
-    <h1 class="text-2xl text-blue-700">My Webpack + Tailwind App</h1>
+  <body class="font-['Montserrat']">
+    <section class="bg-blue-200 flex flex-col">
+      <div class="flex justify-center items-center flex-col text-lg">
+        <p>SPLI</p>
+        <p>TTER</p>
+      </div>
+      <!-- card container -->
+      <div
+        class="bg-gray-50 min-h-screen mx-1 rounded-t-3xl flex flex-col justify-center items-center px-6"
+      >
+        <!-- Input Bill section -->
+        <div class="flex flex-col p-6 rounded-lg w-full space-y-2">
+          <h1 class="text-gray-800">Bill</h1>
+          <div
+            class="bg-slate-100 h-auto rounded-md w-full flex flex-row px-3 py-1"
+          >
+            <span class="text-gray-400"
+              ><i class="fa-solid fa-dollar-sign"></i></span
+            ><input
+              type="text"
+              class="bg-slate-100 outline-none text-right w-[100%] font-bold text-lg text-[#00474b]"
+            />
+          </div>
+        </div>
+        <!-- select percentage -->
+        <div class="flex flex-col p-6 rounded-lg w-full space-y-2">
+          <h1 class="text-gray-800">Select Tip %</h1>
+          <div>
+            <div class="flex items-center flex-wrap justify-center flex-row">
+              <div>
+                <input
+                  class="checkbox-tools"
+                  type="radio"
+                  name="tools"
+                  id="percentage5"
+                  value="5"
+                  checked
+                />
+                <label class="for-checkbox-tools" for="percentage5">5%</label>
+              </div>
+              <!--
+                -->
+              <div>
+                <input
+                  class="checkbox-tools"
+                  type="radio"
+                  name="tools"
+                  id="percentage10"
+                  value="10"
+                />
+                <label class="for-checkbox-tools" for="percentage10">10%</label>
+              </div>
+              <!--
+                -->
+              <div>
+                <input
+                  class="checkbox-tools"
+                  type="radio"
+                  name="tools"
+                  id="percentage15"
+                  value="15"
+                />
+                <label class="for-checkbox-tools" for="percentage15">15%</label>
+              </div>
+              <!--
+                -->
+              <div>
+                <input
+                  class="checkbox-tools"
+                  type="radio"
+                  name="tools"
+                  id="percentage25"
+                  value="25"
+                />
+                <label class="for-checkbox-tools" for="percentage25">25%</label>
+              </div>
+              <!--
+                -->
+              <div>
+                <input
+                  class="checkbox-tools"
+                  type="radio"
+                  name="tools"
+                  id="percentage50"
+                  value="50"
+                />
+                <label class="for-checkbox-tools" for="percentage50">50%</label>
+              </div>
+              <!--
+                -->
+              <div>
+                <input
+                  class="checkbox-tools"
+                  type="radio"
+                  name="tools"
+                  id="custom"
+                  value="custom"
+                />
+                <label class="for-checkbox-tools" for="custom">Custom</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- number of people -->
+        <div class="flex flex-col p-6 rounded-lg w-full space-y-2">
+          <h1 class="text-gray-100">Number of People</h1>
+          <div
+            class="bg-slate-100 h-auto rounded-md w-full flex flex-row px-3 py-1"
+          >
+            <span class="text-gray-400"><i class="fa-solid fa-user"></i></span
+            ><input
+              type="text"
+              class="bg-slate-100 outline-none text-right w-[100%] font-bold text-lg text-[#00474b]"
+            />
+          </div>
+        </div>
+        <!-- output card -->
+        <div
+          class="bg-[#00474b] flex flex-col space-y-[100px] p-6 rounded-lg w-full"
+        >
+          <div class="flex flex-col space-y-6">
+            <div class="flex flex-row justify-between items-center">
+              <div>
+                <h1 class="text-gray-100">Tip Amount</h1>
+                <small class="text-gray-400">/ Perosn</small>
+              </div>
+              <div class="text-[#25C1AD] text-4xl space-x-2 flex">
+                <i class="fa-solid fa-dollar-sign"></i><span>47.21</span>
+              </div>
+            </div>
+            <div class="flex flex-row justify-between items-center">
+              <div>
+                <h1 class="text-gray-800">Total</h1>
+                <small class="text-gray-400">/ Perosn</small>
+              </div>
+              <div class="text-[#25C1AD] text-4xl space-x-2 flex">
+                <i class="fa-solid fa-dollar-sign"></i><span>47.21</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <script src="bundle.js"></script>
   </body>
 </html>
