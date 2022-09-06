@@ -12,24 +12,21 @@ const tipAmount = document.getElementById('tipAmount');
 let bill = +amountInput.value;
 let percentage;
 checkPercent();
+
 let person = +peopleNumber.value;
-console.log(bill);
-console.log(person);
+
 function tipCalculator() {
   percentage = checkPercent();
   person = +peopleNumber.value;
   bill = +amountInput.value;
-  let totalTipp = (bill / person).toFixed(2);
-  let each = ((totalTipp / 100) * percentage).toFixed(2);
-  total.innerText = totalTipp;
-  tipAmount.innerText = each;
-  console.log('active');
-  return each;
+  let billPerson = bill / person;
+  let tipPerson = (billPerson / 100) * percentage;
+  let totalToPay = billPerson + tipPerson;
+  tipAmount.innerText = tipPerson.toFixed(2);
+  total.innerText = totalToPay.toFixed(2);
+  return;
 }
-console.log(tipCalculator());
-
-console.log(percentage);
-
+tipCalculator();
 percent5.addEventListener('change', function () {
   tipCalculator();
 });
@@ -69,15 +66,9 @@ function checkPercent() {
   if (percent50.checked) {
     percentage = 50;
   }
-  console.log(percent5.checked);
-  console.log(percent10.checked);
-  console.log(percent15.checked);
-  console.log(percent25.checked);
-  console.log(percent50.checked);
   return percentage;
 }
-total.innerText = totalTipp;
-tipAmount.innerText = each;
+
 //TODO:
 //ADD CUSTOM functionallity
 //ADD Responsice
