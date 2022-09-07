@@ -20,7 +20,8 @@
     <title>Webpack App</title>
   </head>
   <body class="font-['Montserrat']">
-    <section class="bg-blue-200 flex flex-col">
+    <section class="bg-blue-200 flex h-screen flex-col md:bg-red-100">
+      <!-- SPITTER TITLE -->
       <div
         class="flex justify-center items-center flex-col text-2xl text-[#00474b] font-bold my-6"
       >
@@ -30,28 +31,29 @@
       </div>
       <!-- card container -->
       <div
-        class="bg-gray-50 min-h-screen mx-1 rounded-t-3xl flex flex-col justify-center items-center px-6"
+        class="bg-gray-100 h-[100%] rounded-t-3xl flex flex-col justify-start items-center px-6"
       >
-        <!-- Input Bill section -->
-        <div class="flex flex-col p-6 rounded-lg w-full space-y-2">
-          <h1 class="text-gray-800">Bill</h1>
-          <div
-            class="bg-slate-100 h-auto rounded-md w-full flex flex-row px-3 py-1"
-          >
-            <span class="text-gray-400"
-              ><i class="fa-solid fa-dollar-sign"></i></span
-            ><input
-              type="text"
-              value="120"
-              id="amountInput"
-              class="bg-slate-100 outline-none text-right w-[100%] font-bold text-lg text-[#00474b]"
-            />
+        <!-- input card -->
+        <div class="my-8">
+          <!-- Input Bill section -->
+          <div class="flex flex-col px-4 rounded-lg w-full space-y-2">
+            <h1 class="text-gray-800">Bill</h1>
+            <div
+              class="bg-slate-200 h-auto rounded-md w-full flex flex-row px-3 py-2"
+            >
+              <span class="text-gray-400"
+                ><i class="fa-solid fa-dollar-sign"></i></span
+              ><input
+                type="text"
+                value="120"
+                id="amountInput"
+                class="bg-slate-200 outline-none text-right w-[100%] font-bold text-lg text-[#00474b]"
+              />
+            </div>
           </div>
-        </div>
-        <!-- select percentage -->
-        <div class="flex flex-col p-6 rounded-lg w-full space-y-2">
-          <h1 class="text-gray-800">Select Tip %</h1>
-          <div>
+          <!-- select percentage -->
+          <div class="flex flex-col rounded-lg w-full space-y-2">
+            <h1 class="px-4 text-gray-800">Select Tip %</h1>
             <div class="flex items-center flex-wrap justify-center flex-row">
               <div>
                 <input
@@ -126,25 +128,25 @@
               </div>
             </div>
           </div>
-        </div>
-        <!-- number of people -->
-        <div class="flex flex-col p-6 rounded-lg w-full space-y-2">
-          <h1 class="text-gray-100">Number of People</h1>
-          <div
-            class="bg-slate-100 h-auto rounded-md w-full flex flex-row px-3 py-1"
-          >
-            <span class="text-gray-400"><i class="fa-solid fa-user"></i></span
-            ><input
-              type="text"
-              value="4"
-              id="peopleNumber"
-              class="bg-slate-100 outline-none text-right w-[100%] font-bold text-lg text-[#00474b]"
-            />
+          <!-- number of people -->
+          <div class="flex flex-col px-4 rounded-lg w-full space-y-2">
+            <h1 class="text-gray-800">Number of People</h1>
+            <div
+              class="bg-slate-200 h-auto rounded-md w-full flex flex-row px-3 py-2"
+            >
+              <span class="text-gray-400"><i class="fa-solid fa-user"></i></span
+              ><input
+                type="text"
+                value="4"
+                id="peopleNumber"
+                class="bg-slate-200 outline-none text-right w-[100%] font-bold text-lg text-[#00474b]"
+              />
+            </div>
           </div>
         </div>
         <!-- output card -->
         <div
-          class="bg-[#00474b] flex flex-col space-y-[100px] p-6 rounded-lg w-full"
+          class="bg-[#00474b] flex flex-col space-y-[100px] p-6 rounded-lg w-full mb-6"
         >
           <div class="flex flex-col space-y-6">
             <div class="flex flex-row justify-between items-center">
