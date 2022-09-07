@@ -116,7 +116,7 @@
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
 }
 .checkbox-tools:checked + label {
-  background-color: #25c1ad;
+  background-color: #1d9988;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 .checkbox-tools:not(:checked) + label:hover {
