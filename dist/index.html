@@ -26,7 +26,7 @@
   </head>
   <body class="font-['Montserrat']">
     <section
-      class="bg-back relative flex h-screen flex-col md:justify-center md:items-center dark:bg-backDark"
+      class="bg-back relative flex h-screen flex-col md:justify-center md:items-center dark:bg-backDark transition-all duration-150"
     >
       <!-- DarkMode Toggle -->
       <div class="absolute top-2 right-2">
@@ -169,6 +169,25 @@
                 />
                 <label class="for-checkbox-tools" for="custom">Custom</label>
               </div>
+            </div>
+          </div>
+          <!-- custom percentage -->
+          <div
+            class="flex flex-col px-4 rounded-3xl w-full space-y-2"
+            id="customSection"
+          >
+            <h1 class="text-texts dark:text-textsDark">Custom</h1>
+            <div
+              class="bg-inputs h-auto rounded-md w-full flex flex-row px-3 py-2 dark:bg-inputsDark"
+            >
+              <span class="text-gray-400"
+                ><i class="fa-solid fa-percent"></i></span
+              ><input
+                type="text"
+                value="4"
+                id="customInput"
+                class="bg-inputs outline-none text-right w-[100%] font-bold text-lg dark:text-accentDark dark:bg-inputsDark"
+              />
             </div>
           </div>
           <!-- number of people -->

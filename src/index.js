@@ -4,6 +4,7 @@ const percent10 = document.getElementById('percentage10');
 const percent15 = document.getElementById('percentage15');
 const percent25 = document.getElementById('percentage25');
 const percent50 = document.getElementById('percentage50');
+const customPercent = document.getElementById('custom');
 const amountInput = document.getElementById('amountInput');
 const peopleNumber = document.getElementById('peopleNumber');
 const total = document.getElementById('total');
@@ -12,7 +13,9 @@ const resetBtn = document.getElementById('resetBtn');
 let themeToggleBtn = document.getElementById('theme-toggle');
 let themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
 let themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
-
+const customSection = document.getElementById('customSection');
+const customInput = document.getElementById('customInput');
+customSection.style.display = 'none';
 let bill = +amountInput.value;
 let percentage;
 checkPercent();
@@ -45,6 +48,9 @@ percent25.addEventListener('change', function () {
 percent50.addEventListener('change', function () {
   tipCalculator();
 });
+customPercent.addEventListener('change', function () {
+  tipCalculator();
+});
 
 amountInput.addEventListener('change', function () {
   tipCalculator();
@@ -52,30 +58,38 @@ amountInput.addEventListener('change', function () {
 peopleNumber.addEventListener('change', function () {
   tipCalculator();
 });
+customInput.addEventListener('change', function () {
+  tipCalculator();
+});
 
 function checkPercent() {
   if (percent5.checked) {
+    customSection.style.display = 'none';
     percentage = 5;
   }
   if (percent10.checked) {
+    customSection.style.display = 'none';
     percentage = 10;
   }
   if (percent15.checked) {
+    customSection.style.display = 'none';
     percentage = 15;
   }
   if (percent25.checked) {
+    customSection.style.display = 'none';
     percentage = 25;
   }
   if (percent50.checked) {
+    customSection.style.display = 'none';
     percentage = 50;
+  }
+  if (customPercent.checked) {
+    customSection.style.display = 'block';
+    percentage = +customInput.value;
   }
   return percentage;
 }
-
-//TODO:
-//ADD CUSTOM functionallity
-//ADD Responsice
-//ADD DarkMode
+// reset Button
 resetBtn.addEventListener('click', function () {
   reset();
 });
