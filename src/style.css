@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Please ❤ this if you like it! */
-
 @import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=devanagari,latin-ext');
 
 :root {
@@ -140,4 +138,14 @@
   line-height: 24px;
   display: block;
   padding-bottom: 10px;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }

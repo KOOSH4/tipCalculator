@@ -145,3 +145,11 @@ themeToggleBtn.addEventListener('click', function (event) {
     }
   }
 });
+// Show iOS/Mobile numeric keyboard
+$('input[type="text"]').on('touchstart', function () {
+  $(this).attr('type', 'number');
+});
+
+$('input[type="text"]').on('keydown blur', function () {
+  $(this).attr('type', 'text');
+});
