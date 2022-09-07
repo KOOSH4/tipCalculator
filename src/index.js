@@ -8,11 +8,12 @@ const amountInput = document.getElementById('amountInput');
 const peopleNumber = document.getElementById('peopleNumber');
 const total = document.getElementById('total');
 const tipAmount = document.getElementById('tipAmount');
+const resetBtn = document.getElementById('resetBtn');
 
 let bill = +amountInput.value;
 let percentage;
 checkPercent();
-
+reset();
 let person = +peopleNumber.value;
 
 function tipCalculator() {
@@ -26,7 +27,6 @@ function tipCalculator() {
   total.innerText = totalToPay.toFixed(2);
   return;
 }
-tipCalculator();
 percent5.addEventListener('change', function () {
   tipCalculator();
 });
@@ -73,3 +73,12 @@ function checkPercent() {
 //ADD CUSTOM functionallity
 //ADD Responsice
 //ADD DarkMode
+resetBtn.addEventListener('click', function () {
+  reset();
+});
+function reset() {
+  peopleNumber.value = 1;
+  amountInput.value = 0;
+  tipAmount.innerText = '0.0';
+  total.innerText = '0.0';
+}
