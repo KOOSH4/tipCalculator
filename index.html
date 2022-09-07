@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<!-- dark #373737 -->
+<!-- dark card #141414 -->
+<!-- Accent #B7D0F1 -->
+<!-- Accent2 #FAA549 -->
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <title>S P L I T T E R</title>
+  </head>
+  <body class="font-['Montserrat']">
+    <section
+      class="bg-back relative flex h-screen flex-col md:justify-center md:items-center dark:bg-backDark transition-all duration-150"
+    >
+      <!-- DarkMode Toggle -->
+      <div class="absolute top-2 right-2">
+        <div></div>
+        <button
+          id="theme-toggle"
+          type="button"
+          class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5"
+        >
+          <svg
+            id="theme-toggle-dark-icon"
+            class="hidden w-5 h-5"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+            ></path>
+          </svg>
+          <svg
+            id="theme-toggle-light-icon"
+            class="hidden w-5 h-5"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
+      </div>
+      <!-- SPITTER TITLE -->
+      <div
+        class="flex justify-center items-center flex-col text-2xl text-accent font-bold my-6 dark:text-accentDark"
+      >
+        <h1 class="mb">S&nbsp P&nbsp L&nbsp I</h1>
+
+        <h1>T&nbsp T&nbsp E&nbsp R</h1>
+      </div>
+      <!-- card container -->
+      <div
+        class="bg-card min-w-[400px] h-full rounded-t-3xl flex flex-col justify-start items-center px-6 md:px-6 md:py-6 md:flex-row-reverse md:h-fit md:w-[80%] lg:w-1/2 lg:min-w-[700px] md:rounded-3xl dark:bg-cardDark"
+      >
+        <!-- input card -->
+        <div class="w-full my-8 md:my-0">
+          <!-- Input Bill section -->
+          <div class="flex flex-col px-4 rounded-lg w-full space-y-2">
+            <h1 class="text-texts dark:text-textsDark">Bill</h1>
+            <div
+              class="bg-inputs h-auto rounded-md w-full flex flex-row px-3 py-2 dark:bg-inputsDark"
+            >
+              <span class="text-gray-400"
+                ><i class="fa-solid fa-dollar-sign"></i></span
+              ><input
+                type="text"
+                value="120"
+                id="amountInput"
+                class="bg-inputs outline-none text-right w-[100%] font-bold text-lg dark:text-accentDark dark:bg-inputsDark"
+              />
+            </div>
+          </div>
+          <!-- select percentage -->
+          <div class="flex flex-col rounded-lg w-full space-y-2">
+            <h1 class="px-4 mt-4 text-texts dark:text-textsDark">
+              Select Tip %
+            </h1>
+            <div class="flex items-center flex-wrap justify-center flex-row">
+              <div>
+                <input
+                  class="checkbox-tools"
+                  type="radio"
+                  name="tools"
+                  id="percentage5"
+                  value="5"
+                  checked
+                />
+                <label class="for-checkbox-tools" for="percentage5">5%</label>
+              </div>
+              <!--
+                -->
+              <div>
+                <input
+                  class="checkbox-tools"
+                  type="radio"
+                  name="tools"
+                  id="percentage10"
+                  value="10"
+                />
+                <label class="for-checkbox-tools" for="percentage10">10%</label>
+              </div>
+              <!--
+                -->
+              <div>
+                <input
+                  class="checkbox-tools"
+                  type="radio"
+                  name="tools"
+                  id="percentage15"
+                  value="15"
+                />
+                <label class="for-checkbox-tools" for="percentage15">15%</label>
+              </div>
+              <!--
+                -->
+              <div>
+                <input
+                  class="checkbox-tools"
+                  type="radio"
+                  name="tools"
+                  id="percentage25"
+                  value="25"
+                />
+                <label class="for-checkbox-tools" for="percentage25">25%</label>
+              </div>
+              <!--
+                -->
+              <div>
+                <input
+                  class="checkbox-tools"
+                  type="radio"
+                  name="tools"
+                  id="percentage50"
+                  value="50"
+                />
+                <label class="for-checkbox-tools" for="percentage50">50%</label>
+              </div>
+              <!--
+                -->
+              <div>
+                <input
+                  class="checkbox-tools"
+                  type="radio"
+                  name="tools"
+                  id="custom"
+                  value="custom"
+                />
+                <label class="for-checkbox-tools" for="custom">Custom</label>
+              </div>
+            </div>
+          </div>
+          <!-- custom percentage -->
+          <div
+            class="flex flex-col px-4 rounded-3xl w-full space-y-2"
+            id="customSection"
+          >
+            <h1 class="text-texts dark:text-textsDark">Custom</h1>
+            <div
+              class="bg-inputs h-auto rounded-md w-full flex flex-row px-3 py-2 dark:bg-inputsDark"
+            >
+              <span class="text-gray-400"
+                ><i class="fa-solid fa-percent"></i></span
+              ><input
+                type="text"
+                value="4"
+                id="customInput"
+                class="bg-inputs outline-none text-right w-[100%] font-bold text-lg dark:text-accentDark dark:bg-inputsDark"
+              />
+            </div>
+          </div>
+          <!-- number of people -->
+          <div class="flex flex-col px-4 rounded-3xl w-full space-y-2">
+            <h1 class="text-texts dark:text-textsDark">Number of People</h1>
+            <div
+              class="bg-inputs h-auto rounded-md w-full flex flex-row px-3 py-2 dark:bg-inputsDark"
+            >
+              <span class="text-gray-400"><i class="fa-solid fa-user"></i></span
+              ><input
+                type="text"
+                value="4"
+                id="peopleNumber"
+                class="bg-inputs outline-none text-right w-[100%] font-bold text-lg dark:text-accentDark dark:bg-inputsDark"
+              />
+            </div>
+          </div>
+        </div>
+        <!-- output card -->
+        <div
+          class="bg-[#00474b] w-full flex flex-col items-center justify-center space-y-10 py-8 rounded-lg mb-6 md:py-0 md:h-full md:mb-0 dark:bg-[#002f32]"
+        >
+          <div class="flex flex-row justify-between items-center space-x-10">
+            <div>
+              <h1 class="text-gray-100">Tip Amount</h1>
+              <small class="text-gray-400">/ Perosn</small>
+            </div>
+            <div class="text-[#25C1AD] text-4xl space-x-2 flex">
+              <i class="fa-solid fa-dollar-sign"></i
+              ><span id="tipAmount">47.21</span>
+            </div>
+          </div>
+          <div class="flex flex-row justify-between items-center space-x-10">
+            <div>
+              <h1 class="text-gray-100">Total to Pay</h1>
+              <small class="text-gray-400">/ Perosn</small>
+            </div>
+            <div class="text-[#25C1AD] text-4xl space-x-2 flex">
+              <i class="fa-solid fa-dollar-sign"></i
+              ><span id="total">47.21</span>
+            </div>
+          </div>
+          <button
+            class="bg-[#25C1AD] hover:bg-[#31ffe4] px-4 py-3 w-[80%] rounded-2xl transition-colors duration-200"
+            id="resetBtn"
+          >
+            RESET
+          </button>
+        </div>
+      </div>
+    </section>
+    <script src="bundle.js"></script>
+  </body>
+</html>
